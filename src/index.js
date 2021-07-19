@@ -16,6 +16,8 @@ const raw = (url, flags, opts) => execa(YOUTUBE_DL_PATH, args(url, flags), opts)
 
 module.exports = (url, flags, opts) => raw(url, flags, opts).then(parse)
 
+module.exports.default = (url, flags, opts) => raw(url, flags, opts).then(parse)
+
 module.exports.raw = raw
 
 module.exports.args = args
